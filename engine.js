@@ -102,32 +102,38 @@
     }, false)
 
     function move_indicator() {
-        indicator.style.width = indicator.offsetWidth + (screen.width / 10) + 'px';
+        indicator.style.width = indicator.offsetWidth + (screen.width / 13) + 'px';
         indicator.style.transition = 300 + 'ms' ;
     }
 
     c_num = 0;
     function display_crypto(c_num) {
         c_features_en = [
+            'This currency value is set by a free market.',
             'This currency is secured by unbreakable and unchangeable mathematics laws.',
             'About 2-3% of this currency supply is used for money laundering and funding terrorism.',
             'Inflation is precisely set for the next 100 years and it has a limited supply.',
+            'This type of currency struggles when it comes to universal acceptation.',
             'Based on a completely open system that allows anyone to join, could be accessed anonymously.',
             'It is a global system with no exceptions, international money transfer takes from seconds to a few minutes.',
             'Works 24 hours a day, every day. Had never stopped working.',
             'Its technical details are available for everyone and open-sourced.',
             "Had never been robbed (or hacked) directly from the user's account.",
+            'Transactions made with this currency are impossible to reverse.',
             'This currency is resistant to any kind of centralized control, it is only managed by users in a democratic way.',
             'Based on a completely immune and permanent database, thousands of backups are distributed around the globe and updated every 10 minutes.'];
         c_features_pl = [
+            'Wartość tej waluty ustalana jest przez wolny rynek.',
             'Waluta ta jest zabezpieczona prawami matematyki, nie da się ich złamać ani zmienić.',
             'Około 2-3% zasobów tej waluty jest wykorzystywana do prania brudnych pieniędzy i finansowania teroryzmu.',
             'Inflacja jest precyzyjnie określona na nastepne 100 lat, maksymalna ilość tej waluty również.',
+            'Ta waluta boryka się z problemem powszechnej akceptacji.',
             'Oparta na całkowicie otwartym systemie, każdy może dołączyć. Możliwe jest anonimowe użytkowanie tej waluty.',
             'Działa globalnie, bez żadnych wyjątków. Przelew międzynarodowy zajmuje od kilku sekund do kilkunastu minut.',
             'Działa 24 godziny na dobę, siedem dni w tygodniu. Nigdy nie odnotowano przerwy w pracy.',
             'Jej wszystkie szczegóły techniczne są publicznie dostępne, jest tworzona przez wiele niezależnych osób.',
             "Nigdy nie odnotowano przypadku kradzieży lub skutecznego 'hackowania' konta użytkownika.",
+            'Transkacje wykonane przy jej pomocy są nieodwracalne.',
             'Ta waluta jest odporna na wszystkie sposoby centralnego zarządzania nią, to użytkownicy mają kontrolę i sprawują ją w sposób demokratyczny.',
             'Oparta na odpornej na zmiany i niezniszczalnej bazie danych. Jej kopie zapasowe rozsiane są w tysiącach sztuk po całym świecie, co 10 minut są aktualizowane.'];
         if (lang_index == 0) {
@@ -140,25 +146,31 @@
     f_num = 0;
     function display_fiat(f_num) {
         f_features_en = [
+            "The value of this one is based on the local government's power.",
             'This currency is secured by laws established by humans, vulnerable to changes and possible to be broken.',
             'Approximately 19-23% of its capitalization is used for immoral purposes (terrorism and money laundering).',
             'Future inflation is unknown and impossible to be estimated, supply is unlimited.',
+            'This currency is widely accepted around the world.',
             'Joining its system is only possible after meeting many requirements and revealing users identity.',
             'Some countries are detached from this currency ecosystem, international transfer takes at least a few days (except high fee transfers).',
             'Works mostly 16 hours a day, excepting weekends and holidays when it does not work. Had many shutdowns in the past.',
             'This system mechanics are classified, it was developed by few people.',
             'There were some incidents of highjacking it from private accounts or main vaults.',
+            'There is a possibility of reversing the transaction once it was already sent.',
             'This currency is controlled by local governments and its own users have a rather small impact on it.',
             'This currency uses a database which is vulnerable to changes and destruction. Amount of existing copies, their location and update frequency is classified.'];
         f_features_pl = [
+            'Jej wartość jest ściśle powiązana z siłą i stabilnością lokalnego rządu.',
             'Ta waluta korzysta z praw ustalonych przez człowieka, podatnych na zmianę i bycie łamanym.',
             'Szacunkowo 19-23% jest wykorzystywane do tych samych celów.',
             'Przyszła inflacja jest nieznana i niemożliwa do przewidzenia, zasoby mogą być nieograniczone.',
             'Dołączenie do sytemu pieniężnego jest możliwe po spęłnieniu wielu kryteriów i udostępneniu swojej tożsamości.',
+            'Ten rodzaj waluty jest powszechnie akceptowany na całym świecie.',
             'Niektóre kraje są pozbawione możliwości korzystania z tej waluty. Transfer środków między dwoma państwami zajmuje kilka dni (chyba że zapłacisz sporą prowizję).',
             'Działa 16 godzin na dobę, z wyjątkiem weekendów i świąt gdy nie działa w ogóle. Miała wiele przypadków awarii i przerw w działaniu.',
             'Detale dotyczące jej działania są utajnione, została stworzona przez kilka osób.',
             'Sporadycznie dochodzi do wykradania środków z prywatnych kont i głównych sejfów.',
+            'Istnieje możliwość odwrócenia transakcji, nawet po jej wysłaniu.',
             'Ta waluta jest kontrolowana przez lokalne rządy, uzytkownicy maja nieznaczny wpływ na jej działanie.',
             'Ta korzysta z bazy danych podatnej na zmiany i zniszczenie. Liczba istniejących kopii zapasowych, ich położenie i czestotliwość aktualizacji są utajnione.'];
         if (lang_index == 0) {
@@ -172,13 +184,13 @@
     fiat_points = 0;
 
     function spread_the_virus() {
-        if (crypto_points >> fiat_points) {
+        if (crypto_points >= fiat_points) {
             if (lang_index == 0) {
                 results_box.innerHTML = 'Looks like you prefer Bitcoin, learn how it works and start using it every day.' + '</br>' + '</br>' + 'Discover basic technical datails:' + '</br>' + '<a href="https://bitcoin.org/en/how-it-works"><div class="btc"></div></a>' + '</br>' + 'Exchange your FIAT for Bitcoin here:' + '</br>' + '<a href="https://www.coinbase.com/join/5a8492aed5eb5705ecab8e0c"><div class="coinbase"></div></a>' + '</br>' + ',or find the nearest BTC ATM:' + '</br>' + '<a href="https://coinatmradar.com"><div class="coin_radar"></div></a>' + '</br>';
             } else if (lang_index == 1) {
                 results_box.innerHTML = 'Wygląda na to, że Bitcoin odpowiada na twoje potrzeby najlepiej. Dowiedz się jak działa i zacznij z niego korzystać' + '</br>' + '</br>' + 'Odkryj sposób działania:' + '</br>' + '<a href="https://bitcoin.org/pl/jak-to-dziala"><div class="btc"></div></a>' + '</br>' + 'Wymień swoje pieniądze na Bitcoina tutaj:' + '</br>' + '<a href="https://www.coinbase.com/join/5a8492aed5eb5705ecab8e0c"><div class="coinbase"></div></a>' + '</br>' + ',lub znajdź najblizszy Bitomat:' + '</br>' + '<a href="https://coinatmradar.com"><div class="coin_radar"></div></a>' + '</br>';
             }
-        } else if (fiat_points >> crypto_points) {
+        } else if (fiat_points >= crypto_points) {
             if (lang_index == 0) {
                 results_box.innerHTML = 'It seems like you are a fortunate person, FIAT currencies are the most popular way of exchanging value.';
             } else if (lang_index == 1) {
@@ -186,6 +198,7 @@
             }
         }
     }
+
     function end_screen() {
         document.body.removeChild(crypto_box);
         document.body.removeChild(fiat_box);
@@ -197,13 +210,16 @@
         document.body.appendChild(end_div);
         end_div.appendChild(results);
         end_div.appendChild(results_box);
-        fiat_score = (fiat_points * 10) + '%';
-        crypto_score = (crypto_points * 10) + '%';
-        if (lang_index == 0) {
-            results.innerHTML = 'Here are your results:' + '</br>' + 'FIAT currencies ($USD, €EURO, etc.) suits ' + '<span style="color: #FD6A02">' + fiat_score + '</span>' + ' of your needs.' + '</br>' + 'Cryptocurrency (₿BITCOIN) covers ' + '<span style="color: #FD6A02">' + crypto_score + '</span>' + ' of it.'
-        } else if (lang_index == 1) {
-            results.innerHTML = 'Twoje podsumowanie: ' + '</br>' + 'Waluty fiducjarne ($USD, złPLN) spełniają ' + '<span style="color: #FD6A02">' + fiat_score + '</span>' + ' twoich potrzeb.' + '</br>' + 'Kryptowaluta (₿BITCOIN) spełnia ' + '<span style="color: #FD6A02">' + crypto_score + '</span>' + ' z nich.'
-        }
+        fiat_score = (Math.floor(fiat_points * 7.6));
+        crypto_score = (Math.floor(crypto_points * 7.6));
+            var missing_score = (100 - crypto_score - fiat_score);
+            crypto_score = crypto_score + (missing_score / 2) + '%';
+            fiat_score = fiat_score + (missing_score / 2) + '%';
+                if (lang_index == 0) {
+                    results.innerHTML = 'Here are your results:' + '</br>' + 'FIAT currencies ($USD, €EURO, etc.) suits ' + '<span style="color: #FD6A02">' + fiat_score + '</span>' + ' of your needs.' + '</br>' + 'Cryptocurrency (₿BITCOIN) covers ' + '<span style="color: #FD6A02">' + crypto_score + '</span>' + ' of it.'
+                } else if (lang_index == 1) {
+                    results.innerHTML = 'Twoje podsumowanie: ' + '</br>' + 'Waluty fiducjarne ($USD, złPLN) spełniają ' + '<span style="color: #FD6A02">' + fiat_score + '</span>' + ' twoich potrzeb.' + '</br>' + 'Kryptowaluta (₿BITCOIN) spełnia ' + '<span style="color: #FD6A02">' + crypto_score + '</span>' + ' z nich.'
+                }
         spread_the_virus();
     }
 
@@ -220,7 +236,7 @@
         c_num += 1;
         f_num += 1;
         crypto_points += 1;
-        if (crypto_points + fiat_points >= 10) {
+        if (crypto_points + fiat_points >= 13) {
             end_screen();
         }
     }, false)
@@ -238,7 +254,7 @@
         f_num += 1;
         c_num += 1;
         fiat_points += 1;
-        if (crypto_points + fiat_points >= 10) {
+        if (crypto_points + fiat_points >= 13) {
             end_screen();
         }
     }, false)
