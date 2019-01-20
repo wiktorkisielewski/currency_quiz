@@ -102,7 +102,7 @@
     }, false)
 
     function move_indicator() {
-        indicator.style.width = indicator.offsetWidth + (screen.width / 13) + 'px';
+        indicator.style.width = indicator.offsetWidth + (document.body.offsetWidth / 12) + 'px';
         indicator.style.transition = 300 + 'ms' ;
     }
 
@@ -112,30 +112,30 @@
             'This currency value is set by a free market.',
             'This currency is secured by unbreakable and unchangeable mathematics laws.',
             'About 2-3% of this currency supply is used for money laundering and funding terrorism.',
-            'Inflation is precisely set for the next 100 years and it has a limited supply.',
+            'Money issue is precisely set for the next 100 years and it has a limited supply.',
             'This type of currency struggles when it comes to universal acceptation.',
-            'Based on a completely open system that allows anyone to join, could be accessed anonymously.',
+            'Based on an open system that allows anyone to join, could be accessed anonymously.',
             'It is a global system with no exceptions, international money transfer takes from seconds to a few minutes.',
             'Works 24 hours a day, every day. Had never stopped working.',
-            'Its technical details are available for everyone and open-sourced.',
+            'Its technical details are available for everyone and it is open-sourced.',
             "Had never been robbed (or hacked) directly from the user's account.",
             'Transactions made with this currency are impossible to reverse.',
-            'This currency is resistant to any kind of centralized control, it is only managed by users in a democratic way.',
-            'Based on a completely immune and permanent database, thousands of backups are distributed around the globe and updated every 10 minutes.'];
+            'This currency is resistant to any kind of centralized control, it is fully managed by users in a democratic way.',
+            'Based on an immune database, thousands of backups are distributed around the globe and updated every 10 minutes.'];
         c_features_pl = [
             'Wartość tej waluty ustalana jest przez wolny rynek.',
             'Waluta ta jest zabezpieczona prawami matematyki, nie da się ich złamać ani zmienić.',
             'Około 2-3% zasobów tej waluty jest wykorzystywana do prania brudnych pieniędzy i finansowania teroryzmu.',
-            'Inflacja jest precyzyjnie określona na nastepne 100 lat, maksymalna ilość tej waluty również.',
-            'Oparta na całkowicie otwartym systemie, każdy może dołączyć. Możliwe jest anonimowe użytkowanie tej waluty.',
+            'Emisja nowych jednostek jest precyzyjnie określona na nastepne 100 lat, ich maksymalna ilość również.',
             'Ta waluta boryka się z problemem powszechnej akceptacji.',
+            'Oparta na otwartym systemie, każdy może z niej korzystać. Możliwe jest anonimowe użytkowanie tej waluty.',
             'Działa globalnie, bez żadnych wyjątków. Przelew międzynarodowy zajmuje od kilku sekund do kilkunastu minut.',
             'Działa 24 godziny na dobę, siedem dni w tygodniu. Nigdy nie odnotowano przerwy w pracy.',
             'Jej wszystkie szczegóły techniczne są publicznie dostępne, jest tworzona przez wiele niezależnych osób.',
             "Nigdy nie odnotowano przypadku kradzieży lub skutecznego 'hackowania' konta użytkownika.",
             'Transkacje wykonane przy jej pomocy są nieodwracalne.',
-            'Ta waluta jest odporna na wszystkie sposoby centralnego zarządzania nią, to użytkownicy mają kontrolę i sprawują ją w sposób demokratyczny.',
-            'Oparta na odpornej na zmiany i niezniszczalnej bazie danych. Jej kopie zapasowe rozsiane są w tysiącach sztuk po całym świecie, co 10 minut są aktualizowane.'];
+            'Ta waluta nie może być centralnie sterowana, to użytkownicy mają kontrolę i sprawują ją w sposób demokratyczny.',
+            'Oparta na niezmiennej i niezniszczalnej bazie danych. Jej kopie zapasowe rozsiane są w tysiącach sztuk po całym świecie, co 10 minut są aktualizowane.'];
         if (lang_index == 0) {
             crypto_text.innerHTML = c_features_en[c_num];
         } else if (lang_index == 1) {
@@ -147,32 +147,32 @@
     function display_fiat(f_num) {
         f_features_en = [
             "The value of this one is based on the local government's power.",
-            'This currency is secured by laws established by humans, vulnerable to changes and possible to be broken.',
+            'This currency is secured by laws established by humans, possible to be broken or changed.',
             'Approximately 19-23% of its capitalization is used for immoral purposes (terrorism and money laundering).',
-            'Future inflation is unknown and impossible to be estimated, supply is unlimited.',
+            'Future money issue is impossible to be estimated, supply is unlimited.',
             'This currency is widely accepted around the world.',
-            'Joining its system is only possible after meeting many requirements and revealing users identity.',
+            'Joining its system is possible after meeting many requirements and revealing users identity.',
             'Some countries are detached from this currency ecosystem, international transfer takes at least a few days (except high fee transfers).',
-            'Works mostly 16 hours a day, excepting weekends and holidays when it does not work. Had many shutdowns in the past.',
-            'This system mechanics are classified, it was developed by few people.',
-            'There were some incidents of highjacking it from private accounts or main vaults.',
+            'Works mostly 16 hours a day, excepting weekends and holidays when it does not work. Had a few shutdowns in the past.',
+            'This system mechanics are highly classified.',
+            'There were few incidents of highjacking it from private accounts or main vaults.',
             'There is a possibility of reversing the transaction once it was already sent.',
-            'This currency is controlled by local governments and its own users have a rather small impact on it.',
-            'This currency uses a database which is vulnerable to changes and destruction. Amount of existing copies, their location and update frequency is classified.'];
+            'This currency is controlled by local governments and its own users have tiny impact on it.',
+            'This currency uses a database which is not immune to changes. Amount of existing copies, their location and update frequency is classified.'];
         f_features_pl = [
             'Jej wartość jest ściśle powiązana z siłą i stabilnością lokalnego rządu.',
-            'Ta waluta korzysta z praw ustalonych przez człowieka, podatnych na zmianę i bycie łamanym.',
-            'Szacunkowo 19-23% jest wykorzystywane do tych samych celów.',
-            'Przyszła inflacja jest nieznana i niemożliwa do przewidzenia, zasoby mogą być nieograniczone.',
-            'Dołączenie do sytemu pieniężnego jest możliwe po spęłnieniu wielu kryteriów i udostępneniu swojej tożsamości.',
+            'Ta waluta korzysta z praw ustalonych przez człowieka, możliwe jest ich złamanie lub zmiana',
+            'Szacunkowo 19-23% jest wykorzystywane niezgodnie z prawem.',
+            'Przyszła emisja nowych jednostek jest niemożliwa do przewidzenia, maksymalna ilość jest nieograniczona.',
             'Ten rodzaj waluty jest powszechnie akceptowany na całym świecie.',
+            'Dołączenie do sytemu pieniężnego jest możliwe po spęłnieniu szeregu kryteriów i ujawnieniu swojej tożsamości.',
             'Niektóre kraje są pozbawione możliwości korzystania z tej waluty. Transfer środków między dwoma państwami zajmuje kilka dni (chyba że zapłacisz sporą prowizję).',
-            'Działa 16 godzin na dobę, z wyjątkiem weekendów i świąt gdy nie działa w ogóle. Miała wiele przypadków awarii i przerw w działaniu.',
-            'Detale dotyczące jej działania są utajnione, została stworzona przez kilka osób.',
+            'Działa 16 godzin na dobę, z wyjątkiem weekendów i świąt gdy nie działa w ogóle. Odnotowano sporadyczne przypadki awarii i przerw w działaniu.',
+            'Detale dotyczące jej działania są ściśle tajne',
             'Sporadycznie dochodzi do wykradania środków z prywatnych kont i głównych sejfów.',
             'Istnieje możliwość odwrócenia transakcji, nawet po jej wysłaniu.',
             'Ta waluta jest kontrolowana przez lokalne rządy, uzytkownicy maja nieznaczny wpływ na jej działanie.',
-            'Ta korzysta z bazy danych podatnej na zmiany i zniszczenie. Liczba istniejących kopii zapasowych, ich położenie i czestotliwość aktualizacji są utajnione.'];
+            'Ta korzysta z bazy danych podatnej na zmiany. Liczba istniejących kopii zapasowych, ich położenie i czestotliwość aktualizacji są utajnione.'];
         if (lang_index == 0) {
             fiat_text.innerHTML = f_features_en[f_num];
         } else if (lang_index == 1) {
